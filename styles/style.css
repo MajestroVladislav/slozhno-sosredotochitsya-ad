@@ -223,7 +223,6 @@
   right: 0;
   bottom: -2px; /* Положение подчеркивания */
   height: 2px; /* Высота подчеркивания */
-  background: transparent; /* Цвет подчеркивания */
   transition: background 0.3s; /* Плавный переход цвета */
   background: var(--section-text-color); /* Цвет подчеркивания при наведении */
 }
