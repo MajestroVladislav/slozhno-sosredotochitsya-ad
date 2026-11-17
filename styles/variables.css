@@ -2,6 +2,7 @@
   Переменные для вашего проекта
   и их переопределение под различные устройства
 */
+
 :root {
   --base-font-size: 18px;
   --background-color: #FFF1F7;
@@ -15,17 +16,18 @@
   --section-title-color: #353430;
   --section-text-color: #353430;
   --logo-size: clamp(7.5rem, 0.5625rem + 14.4531vw, 9.8125rem);
-  --logo-size-mobile: clamp(7.25rem, 7.0115rem + 1.0178vw, 7.5rem);;
+  --logo-size-mobile: clamp(7.25rem, 7.0115rem + 1.0178vw, 7.5rem);
   background-size: cover;
   background-position: top center;
   background-attachment: fixed;
-height: 100vh;
+  height: 100vh;
   --background-image: url("../images/cover-image-light.png");
 
   .rec-label {
     display: none;
   }
 }
+
 
 @media (prefers-color-scheme: dark) {
   :root {
@@ -44,9 +46,9 @@ height: 100vh;
     background-attachment: fixed;
     height: 100vh;
     --background-image: url("../images/cover-image-dark.png");
+  }
 
-    .rec-label {
-      display: block;
-    }
+  .rec-label {
+    display: block;
   }
 }

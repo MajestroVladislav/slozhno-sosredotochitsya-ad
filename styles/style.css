@@ -225,9 +225,6 @@
   height: 2px; /* Высота подчеркивания */
   background: transparent; /* Цвет подчеркивания */
   transition: background 0.3s; /* Плавный переход цвета */
-}
-
-.link:hover::after {
   background: var(--section-text-color); /* Цвет подчеркивания при наведении */
 }
 
