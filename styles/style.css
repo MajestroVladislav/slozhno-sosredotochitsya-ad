@@ -1,5 +1,6 @@
 /* Основные стили проекта. Это стили для темы, которую вы верстаете первой. */
 
+
 .page {
   /* сохраните в разметке и стилях класс page у тега body. Он удобен, чтобы составлять селекторы для разных цветовых тем. */
   color: var(--paragraph-bg-color);
@@ -62,6 +63,7 @@
   top: var(--main-gap);
 }
 
+
 .rec__container::after {
   content: "";
   background-color: var(--paragraph-bg-color);
@@ -74,6 +76,7 @@
   margin-block-end: 2px;
 }
 
+
 .header__theme-menu-list {
   margin-block-start: 64px;
   display: grid;
@@ -82,9 +85,11 @@
   gap: var(--main-gap);
 }
 
+
 .header__theme-menu-item {
   line-height: 23.4px;
 }
+
 
 .header__theme-menu-button:hover {
   cursor: pointer;
@@ -93,10 +98,12 @@
   padding-block-end: 4px;
 }
 
+
 .header__theme-menu-button_active {
   outline: 1px solid var(--accent-color);
   pointer-events: none;
 }
+
 
 .header__theme-menu-button {
   font-size: var(--line-height-text);
@@ -110,13 +117,16 @@
   padding-block-end: 5px;
 }
 
+
 .header__theme-menu-button:focus {
   outline: none;
 }
 
+
 .header__theme-menu-button:focus-visible {
   border-block-end: 1px solid var(--accent-color);
 }
+
 
 .main-title {
   display: grid;
@@ -126,12 +136,14 @@
   line-height: 95.7px;
 }
 
+
 .paragraph__container {
   margin-block-start: 55px;
   align-content: center;
   color: var(--second-title-color);
   height: fit-content;
 }
+
 
 .title-decor {
   background-color: var(--paragraph-bg-color);
@@ -142,6 +154,7 @@
   color: var(--second-title-color);
 }
 
+
 .section {
   display: grid;
   width: fit-content;
@@ -150,10 +163,12 @@
   gap: 50px;
 }
 
+
 .content-section {
   display: grid;
   gap: 20px;
 }
+
 
 .minor-title {
   font-size: var(--line-height-text);
@@ -162,6 +177,7 @@
   color: var(--main-title-color);
 }
 
+
 .post-minor-title {
   color: var(--second-title-color);
   font-size: var(--line-height-text);
@@ -169,12 +185,14 @@
   font-weight: var(--font-weight-bold);
 }
 
+
 .post-minor-title-regular {
   color: var(--second-title-color);
   font-size: var(--line-height-text);
   line-height: 23.4px;
   font-weight: var(--font-weight-regular);
 }
+
 
 .post-minor-description {
   margin-block-start: 10px;
@@ -184,27 +202,33 @@
   font-weight: var(--font-weight-regular);
 }
 
+
 .description__link {
   text-decoration: none;
   text-shadow: 2px 1px 0 var(--paragraph-bg-color);
 }
 
+
 .description__link:hover {
   border-bottom: 1px solid var(--description-text-color);
 }
+
 
 .description__link:focus {
   outline: none;
 }
 
+
 .description__link:focus-visible {
   outline: 1px solid var(--description-text-color);
 }
+
 
 .section__list {
   display: grid;
   gap: 20px;
 }
+
 
 .minor-title__last-of-type {
   color: var(--second-title-color);
@@ -214,6 +238,7 @@
   margin-block-end: 10px;
 }
 
+
 .gallery {
   margin-block-start: -20px;
   display: grid;
@@ -222,11 +247,13 @@
   justify-content: center;
 }
 
+
 .gallery__items {
   width: 100%;
   height: 100%;
   object-fit: cover;
 }
+
 
 .footer {
   margin-block-start: 30px;
@@ -238,6 +265,7 @@
   min-height: 668px;
   padding: var(--main-gap);
 }
+
 
 .footer__container {
   display: grid;

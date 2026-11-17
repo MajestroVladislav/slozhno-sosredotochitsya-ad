@@ -11,6 +11,7 @@
   */
 }
 
+
 .theme-light .page {
   /* Вам также нужно будет написать ряд подобных селекторов */
   --bg-color: #fff1f7;
@@ -29,6 +30,7 @@
 .theme-light .rec__container {
   display: none;
 }
+
 
 @media (prefers-color-scheme: light) {
   :root {
