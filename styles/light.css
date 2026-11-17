@@ -16,5 +16,6 @@
   --cover-image: url("../images/cover-image-light.png");
   --button-text-color: #353430;
   --button-border-color: rgba(53, 52, 48, 0.4);
+  --link-shadow-color: #FF8DCB;
   --lightbulb-visibility: hidden;
 }

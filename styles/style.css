@@ -1,44 +1,53 @@
 /* Основные стили проекта. Это стили для темы, которую вы верстаете первой. */
 
 .page {
-  /* сохраните в разметке и стилях класс page у тега body. Он удобен, чтобы составлять селекторы для разных цветовых тем. */
+  color: var(--text-color);
+  font-family: 'IBM Plex mono', monospace;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 1.3;
   background-color: var(--background-color);
+  background-image: var(--cover-image);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  background-attachment: fixed;
   overflow-x: clip;
 }
 
 h3 {
-  font-size: 18px;
-  font-weight: 700;
+  margin: 0;
   color: var(--headings-color);
-  margin-top: 50px;
+  font-size: 18px;
+  line-height: 1.3;
+  font-weight: 700;
+}
+
+h4,
+h5 {
+  margin: 0;
+  color: var(--background-color);
+  background-color: var(--headings-color);
+  font-size: 18px;
+  line-height: 1.3;
 }
 
 h4 {
-  font-size: 18px;
   font-weight: 700;
-  color: var(--background-color);
-  background-color: var(--headings-color);
-  margin-top: 10px;
-  margin-bottom: 10px;
+}
+
+h5 {
+  font-weight: 400;
 }
 
 .unusual-h4 {
-  margin-top: 0px;
-  margin-bottom: -5px;
-}
-
-
-h5 {
-  font-size: 18px;
-  font-weight: 300;
-  color: var(--background-color);
-  background-color: var(--headings-color);
-  margin-top: 10px;
-  margin-bottom: 10px;
+  margin: 0;
 }
 
 p {
   color: var(--text-color);
+  font-size: 18px;
+  line-height: 1.3;
 }
 
 .decorated-zone::before,
@@ -203,6 +212,8 @@ a:focus-visible {
 
 
 main {
+  display: grid;
+  gap: 50px;
   margin-top: 40px;
   padding-inline: 10px;
 }
@@ -211,7 +222,7 @@ main {
   display: grid;
   grid-template-columns: 1fr;
   gap: 20px;
-  margin-block-end: 40px;
+  margin: 0;
 }
 
 .content-section h3 {
@@ -222,6 +233,23 @@ main {
   display: grid;
   grid-template-columns: 1fr;
   gap: 20px;
+}
+
+.content-section--tips .unusual-h4 {
+  margin: 0;
+}
+
+.content-section--tips .content-section__content {
+  gap: 20px;
+}
+
+main > h4 {
+  margin: 0;
+  color: var(--background-color);
+  background-color: var(--headings-color);
+  font-size: 18px;
+  line-height: 1.3;
+  font-weight: 700;
 }
 
 .images {
@@ -252,8 +280,14 @@ footer {
   text-shadow: 4px 4px var(--headings-color);
 }
 
+
 @media (width >= 768px) {
+  main > h4 {
+    margin-bottom: -60px;
+  }
+
   main {
+    gap: 80px;
     padding-inline: 20px;
   }
 
@@ -263,7 +297,7 @@ footer {
 
   .header__title {
     margin-left: -20px;
-    font-size: clamp(7.5rem, 0.5625rem + 14.4531vw, 9.8125rem);
+    font-size: clamp(120px, 14.4531vw + 0.5625rem, 157px);
   }
 
   .header__description {
@@ -290,49 +324,51 @@ footer {
   }
 
   .content-section--why,
-  .content-section--factors,
   .content-section--tips {
-    grid-template-columns: minmax(0, 1fr) 2fr;
+    grid-template-columns: minmax(0, 1fr) minmax(0, 2fr);
     column-gap: 20px;
   }
 
   .content-section--why > h3,
-  .content-section--factors > h3,
   .content-section--tips > h3 {
     grid-column: 1;
     grid-row: 1;
   }
 
-  .content-section__content {
+  .content-section--why > .content-section__content,
+  .content-section--tips > .content-section__content {
     grid-column: 2;
     grid-row: 1;
   }
 
-  .content-section--factors .content-section__content {
-    grid-column: 1 / span 2;
+  .content-section--factors {
+    grid-template-columns: minmax(0, 1fr) minmax(0, 2fr);
+    column-gap: 20px;
+  }
+
+  .content-section--factors > h3 {
+    grid-column: 1;
+    grid-row: 1;
+  }
+
+  .content-section--factors > .content-section__content {
+    grid-column: 1 / -1;
     grid-row: 2;
   }
 
   .images {
     grid-template-columns: repeat(3, minmax(0, 1fr));
     grid-template-areas:
+      "h4 h4 h4"
       "sunset sunset ice-cream"
       "tape books ice-cream"
       "tape street street";
-    grid-auto-rows: auto;
     gap: 20px;
   }
 
-  .images h4 {
+  .images > h4 {
     grid-column: 1 / -1;
-  }
-
-  .images img {
-    width: 100%;
-    height: 100%;
-    min-width: 0;
-    object-fit: cover;
-    object-position: center;
+    grid-row: 1;
   }
 
   .images__sunset {
@@ -355,6 +391,13 @@ footer {
     grid-area: street;
   }
 
+  .images img {
+    width: 100%;
+    height: 100%;
+    min-width: 0;
+    object-fit: cover;
+  }
+
   footer {
     margin-top: 60px;
   }
@@ -372,10 +415,6 @@ footer {
     gap: 10px;
   }
 
-  .header__description {
-    inline-size: 50%;
-  }
-
   .content-section--factors {
     grid-template-columns: repeat(3, minmax(0, 1fr));
     column-gap: 20px;
@@ -389,16 +428,6 @@ footer {
   .content-section--factors > .content-section__content {
     grid-column: 1 / -1;
     grid-row: 2;
-
-    display: grid;
     grid-template-columns: repeat(3, minmax(0, 1fr));
-    gap: 20px;
-  }
-
-  .content-section--factors .content-item1,
-  .content-section--factors .content-item2,
-  .content-section--factors .content-item3 {
-    grid-column: auto;
-    min-width: 0;
   }
 }

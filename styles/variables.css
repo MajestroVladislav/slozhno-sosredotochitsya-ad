@@ -3,27 +3,27 @@
   и их переопределение под различные устройства
 */
 :root {
-  --background-color: #FFF1F7;
-  --headings-color: #FF8DCB;
-  --text-color: #353430;
-  --h1-color: #FFC2E6;
-  --cover-image: url("../images/cover-image-light.png");
-  --button-text-color: #353430;
-  --button-border-color: rgba(53, 52, 48, 0.4);
-  --link-shadow-color: #FF8DCB;
-  --lightbulb-visibility: hidden;
+  --background-color: #000028;
+  --headings-color: #FF0070;
+  --text-color: #F1B2CE;
+  --h1-color: #DB00FF;
+  --cover-image: url("../images/cover-image-dark.png");
+  --button-text-color: #FF0070;
+  --button-border-color: rgba(255, 0, 112, 0.4);
+  --link-shadow-color: #FF0070;
+  --lightbulb-visibility: visible;
 }
 
-@media (prefers-color-scheme: dark) {
+@media (prefers-color-scheme: light) {
   :root.theme-auto {
-    --background-color: #000028;
-    --headings-color: #FF0070;
-    --text-color: #F1B2CE;
-    --h1-color: #DB00FF;
-    --cover-image: url("../images/cover-image-dark.png");
-    --button-text-color: #FF0070;
-    --button-border-color: rgba(255, 0, 112, 0.4);
-    --link-shadow-color: #FF0070;
-    --lightbulb-visibility: visible;
+    --background-color: #FFF1F7;
+    --headings-color: #FF8DCB;
+    --text-color: #353430;
+    --h1-color: #FFC2E6;
+    --cover-image: url("../images/cover-image-light.png");
+    --button-text-color: #353430;
+    --button-border-color: rgba(53, 52, 48, 0.4);
+    --link-shadow-color: #FF8DCB;
+    --lightbulb-visibility: hidden;
   }
 }
